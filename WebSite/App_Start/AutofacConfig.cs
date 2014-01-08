@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
+using WebSite.Models;
 
 namespace WebSite
 {
@@ -18,16 +19,17 @@ namespace WebSite
 
             builder.RegisterModelBinders(assembly);
             builder.RegisterModelBinderProvider();
-            builder.RegisterControllers(assembly);
+            builder.RegisterControllers(assembly).PropertiesAutowired();
             builder.RegisterModule<AutofacWebTypesModule>();
 
             //builder.RegisterType<LoggingService>().As<ILoggingService>();
+            builder.RegisterType<LunchBoxDbContext>().As<ILunchBoxDbContext>();
 
             IContainer container = builder.Build();
             container.ActivateGlimpse();
 
             // MVC dependency resolver
-            DependencyResolver.SetResolver(new Autofac.Integration.Mvc.AutofacDependencyResolver(container));
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
             // WebAPI dependency resolver
             //GlobalConfiguration.Configuration.DependencyResolver = new Autofac.Integration.WebApi.AutofacWebApiDependencyResolver(container);

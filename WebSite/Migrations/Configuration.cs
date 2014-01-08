@@ -11,7 +11,7 @@ namespace WebSite.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(WebSite.Models.LunchBoxDbContext context)

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebSite.Models;
 
 namespace WebSite.Controllers
 {
     public class HomeController : Controller
     {
+        public ILunchBoxDbContext context { get; set; }
+
         public ActionResult Index()
         {
-            return View();
+            return View(context.Sessions.ToList());
         }
 
         public ActionResult About()
