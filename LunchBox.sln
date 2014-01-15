@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Tests", "WebSite.Tests\WebSite.Tests.csproj", "{5170DBC2-4F07-46A4-807C-B53F746E1D21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADFSDemo", "ADFSDemo\ADFSDemo.csproj", "{7DD77BAB-1A01-41E4-8609-95FF90A329EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5170DBC2-4F07-46A4-807C-B53F746E1D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5170DBC2-4F07-46A4-807C-B53F746E1D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5170DBC2-4F07-46A4-807C-B53F746E1D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD77BAB-1A01-41E4-8609-95FF90A329EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD77BAB-1A01-41E4-8609-95FF90A329EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD77BAB-1A01-41E4-8609-95FF90A329EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD77BAB-1A01-41E4-8609-95FF90A329EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
