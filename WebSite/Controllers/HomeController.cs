@@ -10,9 +10,11 @@ namespace WebSite.Controllers
     public class HomeController : Controller
     {
         public ILunchBoxDbContext context { get; set; }
+        public IApplicationDbContext<ApplicationUser> securityContext { get; set; }
 
         public ActionResult Index()
         {
+
             return View(context.Sessions.ToList());
         }
 
